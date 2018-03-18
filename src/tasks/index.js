@@ -22,7 +22,7 @@ class Tasks extends React.Component{
   }
 
   render(){
-    console.log(url)
+    console.log(process.env.NODE_ENV)
     const { tasks } = this.state
     return(
       <div>
