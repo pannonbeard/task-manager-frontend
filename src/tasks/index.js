@@ -1,9 +1,9 @@
 import React from "react"
 import Task from './task'
 
-const url = process.env.NODE_ENV === 'production' 
-  ? 'https://task-backend-staging.herokuapp.com/'
-  : 'http://localhost:4000'
+const url = process.env.NODE_ENV === 'development' 
+  ? 'http://localhost:4000'
+  : 'https://task-backend-staging.herokuapp.com/'
 class Tasks extends React.Component{
   constructor(props){
     super(props)
@@ -22,6 +22,7 @@ class Tasks extends React.Component{
   }
 
   render(){
+    console.log(url)
     const { tasks } = this.state
     return(
       <div>
