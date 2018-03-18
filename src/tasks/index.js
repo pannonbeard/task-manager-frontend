@@ -1,7 +1,7 @@
 import React from "react"
 import Task from './task'
 
-const url = process.env.NODE_ENV === 'development' 
+const url = process.env.NODE_ENV !== 'development' 
   ? 'http://localhost:4000'
   : 'https://task-backend-staging.herokuapp.com/'
 class Tasks extends React.Component{
