@@ -1,6 +1,9 @@
 import React from "react"
 import Task from './task'
 
+const url = process.env ==- 'production' 
+  ? 'https://task-backend-staging.herokuapp.com/'
+  : 'http://localhost:4000'
 class Tasks extends React.Component{
   constructor(props){
     super(props)
@@ -13,7 +16,7 @@ class Tasks extends React.Component{
   }
 
   getTasks() {
-    fetch('http://localhost:4000/api/v1/tasks.json')
+    fetch(url + '/api/v1/tasks.json')
       .then( (response) => response.json() )
       .then( (data) => this.setState({ tasks: data['tasks'] }) )
   }
@@ -21,15 +24,11 @@ class Tasks extends React.Component{
   render(){
     const { tasks } = this.state
     return(
-      <div style={styles}>
+      <div>
         { tasks.map( (task, index) => <Task key={index} {...task} /> ) }
       </div>
     )
   }
-}
-
-const styles = {
-  backgroundColor: 'gray'
 }
 
 export default Tasks
