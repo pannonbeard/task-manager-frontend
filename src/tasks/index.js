@@ -11,7 +11,7 @@ class Tasks extends React.Component{
       tasks: []
     }
   }
-  componentWillMount(){
+  componentDidMount(){
     this.getTasks()
   }
 
