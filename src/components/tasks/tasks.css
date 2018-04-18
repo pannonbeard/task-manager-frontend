@@ -1,5 +1,6 @@
 .Tasks{
   display: flex;
   flex-wrap: wrap;
-  overflow: scroll;
+  box-sizing: border-box;
+  overflow-y: scroll;
 }
