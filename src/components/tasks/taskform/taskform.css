@@ -1,0 +1,21 @@
+.TaskForm {
+  display: flex;
+  flex-direction: column;
+  padding: 10px;
+  width: 100%;
+}
+
+.TaskForm label {
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.TaskForm input, .TaskForm textarea {
+  border: solid 2px #ccc;
+  padding: 5px;
+  border-radius: 3px;
+}
+
+.Button {
+  padding: 10px 0;
+}
