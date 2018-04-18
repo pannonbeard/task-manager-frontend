@@ -3,11 +3,8 @@ import Task from './task/task'
 import axios from '../../axios-tasks'
 
 class Tasks extends React.Component{
-  constructor(props){
-    super(props)
-    this.state = {
-      tasks: []
-    }
+  state = {
+    tasks: []
   }
   
   componentDidMount(){
