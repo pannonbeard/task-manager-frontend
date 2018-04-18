@@ -1,6 +1,7 @@
 import React from "react"
 import Task from './task/task'
 import axios from '../../axios-tasks'
+import styles from './tasks.css'
 
 class Tasks extends React.Component{
   state = {
@@ -15,7 +16,7 @@ class Tasks extends React.Component{
   render(){
     const { tasks } = this.state
     return(
-      <div>
+      <div className={styles.Tasks}>
         { tasks.map( (task, index) => <Task key={index} {...task} /> ) }
       </div>
     )
