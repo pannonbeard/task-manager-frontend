@@ -1,6 +1,5 @@
-import React, { Fragment } from 'react'
-import SideMenu from '../../components/sidemenu/sidemenu'
-
+import React from 'react'
+import SideMenu from './sidemenu/sidemenu'
 import styles from './layout.css'
 
 const layout = (props) => (
