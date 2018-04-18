@@ -9,15 +9,26 @@ class Tasks extends React.Component{
   }
   
   componentDidMount(){
+    this.getTasks()
+  }
+
+  getTasks = () => {
     axios.get('/api/v1/tasks.json')
       .then(response => this.setState({ tasks: response.data['tasks'] }))
+      .catch(err => alert(err.message))
+  }
+
+  removeTaskHandler = (id) => {
+    axios.delete('/api/v1/tasks/'+id, )
+      .then( response => this.getTasks())
+      .catch( err => alert(err.message))
   }
 
   render(){
     const { tasks } = this.state
     return(
       <div className={styles.Tasks}>
-        { tasks.map( (task, index) => <Task key={index} {...task} /> ) }
+        { tasks.map( (task) => <Task key={task.id} {...task} remove={() => this.removeTaskHandler(task.id)}/> ) }
       </div>
     )
   }
