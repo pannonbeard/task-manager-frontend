@@ -1,6 +1,6 @@
 import React from "react"
 import Task from './task/task'
-import axios from '../axios-tasks'
+import axios from '../../axios-tasks'
 
 class Tasks extends React.Component{
   constructor(props){
