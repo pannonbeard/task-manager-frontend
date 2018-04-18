@@ -7,8 +7,8 @@ const sideMenu = (props) => (
       Menu
     </header>
     <ul>
-      <li>Tasks</li>
-      <li>New Task</li>
+      <li onClick={props.showAllTasks}>Tasks</li>
+      <li onClick={props.openTaskForm}>New Task</li>
     </ul>
   </div>
 )

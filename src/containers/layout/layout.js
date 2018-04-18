@@ -4,7 +4,7 @@ import styles from './layout.css'
 
 const layout = (props) => (
   <div className={styles.Layout}>
-    <SideMenu />
+    <SideMenu openTaskForm={props.addTaskView} showAllTasks={props.allTaskView}/>
     {props.children}
   </div>
 )
