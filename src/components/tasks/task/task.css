@@ -11,25 +11,23 @@
 
 .Header {
   background-color: rgba(0,0,0,0.5);
-  display: grid;
-  grid-template-columns: 2fr 1fr;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
+  color: white;
+  padding: 10px;
 }
 
 .HeadingOne {
-  margin: 0;
+  margin: 0 0 10px;
   text-align: center;
-  padding: 5px 0;
 }
 
 .Paragraph {
   margin: 0;
   text-align: center;
-  padding: 5px 0;
 }
 
 .Body {
